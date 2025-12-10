@@ -1,0 +1,236 @@
+/* =========================
+   DoDigital Tech — Brand Styles
+   Colors pulled from logo
+   ========================= */
+
+/* Brand Colors */
+:root {
+  --dodigital-blue: #00AEEF;
+  --dodigital-blue-dark: #008FCC;
+  --dodigital-navy: #0B1A2A;
+  --dodigital-white: #ffffff;
+  --dodigital-gray: #64748b;
+}
+
+/* Global Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Inter", system-ui, -apple-system, sans-serif;
+}
+
+body {
+  background-color: var(--dodigital-navy);
+  color: var(--dodigital-white);
+}
+
+/* =========================
+   NAVIGATION
+   ========================= */
+nav {
+  background-color: #000000;
+  padding: 16px 32px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  border-bottom: 1px solid #13263f;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+nav .brand {
+  color: var(--dodigital-blue);
+  font-size: 18px;
+  letter-spacing: 0.6px;
+}
+
+nav a {
+  color: var(--dodigital-white);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+nav a:hover {
+  color: var(--dodigital-blue);
+}
+
+/* =========================
+   PAGE CONTAINER
+   ========================= */
+.page {
+  max-width: 1000px;
+  margin: 40px auto;
+  background: var(--dodigital-white);
+  color: var(--dodigital-navy);
+  padding: 40px;
+  border-radius: 14px;
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.35);
+}
+
+/* =========================
+   HEADINGS & TEXT
+   ========================= */
+h1 {
+  font-size: 34px;
+  margin-bottom: 18px;
+}
+
+h2 {
+  margin-top: 24px;
+  color: var(--dodigital-blue);
+}
+
+p {
+  margin-bottom: 16px;
+  color: var(--dodigital-gray);
+  line-height: 1.6;
+}
+
+.tagline {
+  font-size: 16px;
+  color: #64748b;
+  max-width: 520px;
+  margin: 0 auto 12px;
+}
+
+
+.accent {
+  color: var(--dodigital-blue);
+}
+
+/* =========================
+   FORMS
+   ========================= */
+label {
+  display: block;
+  margin-top: 14px;
+  font-weight: 600;
+}
+
+select,
+input,
+textarea {
+  width: 100%;
+  padding: 12px 14px;
+  margin-top: 8px;
+  border-radius: 10px;
+  border: 1px solid #cbd5e1;
+  font-size: 14px;
+  transition: border 0.2s ease, box-shadow 0.2s ease;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+  border-color: var(--dodigital-blue);
+  box-shadow: 0 0 0 3px rgba(0, 174, 239, 0.15);
+}
+
+/* =========================
+   BUTTONS
+   ========================= */
+button {
+  margin-top: 20px;
+  background-color: var(--dodigital-blue);
+  color: var(--dodigital-white);
+  border: none;
+  padding: 14px 28px;
+  border-radius: 12px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 15px;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+button:hover {
+  background-color: var(--dodigital-blue-dark);
+  transform: translateY(-2px);
+}
+
+button:disabled {
+  background-color: #94a3b8;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* =========================
+   SUCCESS / FEEDBACK
+   ========================= */
+.success {
+  margin-top: 20px;
+  color: #16a34a;
+  font-weight: 600;
+}
+
+/* =========================
+   HOME PAGE (TECH HERO)
+   ========================= */
+.hero {
+  text-align: center;
+}
+
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 24px;
+  margin-top: 40px;
+}
+
+.feature-card {
+  background: var(--dodigital-navy);
+  color: var(--dodigital-white);
+  padding: 26px;
+  border-radius: 14px;
+  box-shadow: inset 0 0 0 1px #13263f;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-8px);
+  box-shadow: inset 0 0 0 1px var(--dodigital-blue);
+}
+
+.feature-card h3 {
+  margin-bottom: 8px;
+  color: var(--dodigital-blue);
+}
+
+/* =========================
+   ANIMATIONS
+   ========================= */
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 0.9s ease forwards;
+}
+
+.slide-up {
+  opacity: 0;
+  transform: translateY(24px);
+  animation: slideUp 0.8s ease forwards;
+}
+
+.delay-1 {
+  animation-delay: 0.2s;
+}
+.delay-2 {
+  animation-delay: 0.4s;
+}
+.delay-3 {
+  animation-delay: 0.6s;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

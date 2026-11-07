@@ -27,3 +27,6 @@ Users can:
 cd backend
 npm install
 npm run dev
+
+## Setup
+Create `backend/.env` with `MONGO_URI=<your MongoDB connection string>`, then run `npm install && node server.js` in `backend/` and `npm install && npm run dev` in `frontend/`.
